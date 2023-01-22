@@ -44,28 +44,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/normalized', async (req: Request, res: Response) => {
-  // Traigo todos los mensajes y los devuelvo en un json
-  // const messages = await getAllNormalized();
-  // if (messages.success) {
-  //   res.json(messages);
-  // } else {
-  //   res.status(400).json({
-  //     msg: messages.msg,
-  //   });
-  // }
-});
-
-router.get('/desnormalized', async (req: Request, res: Response) => {
-  // Traigo todos los mensajes y los devuelvo en un json
-  // const messages = await desnormalized();
-  // if (messages.success) {
-  //   res.json(messages);
-  // } else {
-  //   res.status(400).json({
-  //     msg: messages.msg,
-  //   });
-  // }
-});
-
 export default router;

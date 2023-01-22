@@ -52,26 +52,4 @@ router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         });
     }
 }));
-router.get('/normalized', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // Traigo todos los mensajes y los devuelvo en un json
-    // const messages = await getAllNormalized();
-    // if (messages.success) {
-    //   res.json(messages);
-    // } else {
-    //   res.status(400).json({
-    //     msg: messages.msg,
-    //   });
-    // }
-}));
-router.get('/desnormalized', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // Traigo todos los mensajes y los devuelvo en un json
-    // const messages = await desnormalized();
-    // if (messages.success) {
-    //   res.json(messages);
-    // } else {
-    //   res.status(400).json({
-    //     msg: messages.msg,
-    //   });
-    // }
-}));
 exports.default = router;
