@@ -1,20 +1,14 @@
 {
-  "name": "proyecto-ecommerce-con-balanceador-de-carga",
+  "name": "proyecto-ecommerce-deploy-en-railway",
   "version": "1.0.0",
-  "description": "Se agregan funcionalidades de fork y cluster, y configuraciones de Nginx",
+  "description": "Desafío entregable coderhouse con deploy de la aplicación en Railway",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/index.js --mode=cluster",
+    "start": "node dist/index.js",
     "build": "tsc",
     "watch": "tsc -w",
     "dev": "nodemon",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "npm run build && forever start dist/index.js --port=8080 --mode=cluster",
-    "foreverstop:all": "forever stopall",
-    "prod:fork": "npm run build && pm2 start dist/index.js --watch --name=EjemploPm2Fork",
-    "pm2ecosystem": "pm2 start ecosystem.config.js",
-    "pm2stop:all": "pm2 stop all",
-    "pm2delete:all": "pm2 delete all"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -43,7 +37,6 @@
     "express-session": "^1.17.3",
     "moment": "^2.29.4",
     "mongoose": "^6.8.1",
-    "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "socket.io": "^4.5.4",
