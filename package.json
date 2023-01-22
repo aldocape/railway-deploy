@@ -4,7 +4,7 @@
   "description": "Se agregan funcionalidades de fork y cluster, y configuraciones de Nginx",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start dist/index.js --watch -i max --name=EjemploPm2Cluster",
+    "start": "node dist/index.js",
     "build": "tsc",
     "watch": "tsc -w",
     "dev": "nodemon",
@@ -46,7 +46,6 @@
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "pm2": "^5.2.2",
     "socket.io": "^4.5.4",
     "yargs": "^17.6.2"
   }
