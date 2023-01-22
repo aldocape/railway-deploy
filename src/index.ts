@@ -5,7 +5,7 @@ import { MODE, numCPUs, myHTTPServer } from './services/server';
 import './services/database';
 import cluster from 'cluster';
 
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 
 /* --------------------------------------------------------------------------- */
 /* MASTER */
