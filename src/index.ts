@@ -1,9 +1,11 @@
 // import config from './config';
-import { PORT, MODE, numCPUs, myHTTPServer } from './services/server';
+import { MODE, numCPUs, myHTTPServer } from './services/server';
 
 // La conexión a la base de datos de MongoDB Atlas la ejecuto directamente en el script database
 import './services/database';
 import cluster from 'cluster';
+
+const PORT = process.env.PORT || 8080;
 
 /* --------------------------------------------------------------------------- */
 /* MASTER */

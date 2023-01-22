@@ -8,6 +8,7 @@ const server_1 = require("./services/server");
 // La conexión a la base de datos de MongoDB Atlas la ejecuto directamente en el script database
 require("./services/database");
 const cluster_1 = __importDefault(require("cluster"));
+const PORT = process.env.PORT || 8080;
 /* --------------------------------------------------------------------------- */
 /* MASTER */
 if (server_1.MODE === 'cluster' && cluster_1.default.isPrimary) {
@@ -24,8 +25,8 @@ else {
     /* --------------------------------------------------------------------------- */
     /* WORKERS */
     console.log(`PID WORKER ${process.pid}`);
-    server_1.myHTTPServer.listen(server_1.PORT, () => {
-        console.log(`🚀 Servidor escuchando en el puerto ${server_1.PORT}`);
+    server_1.myHTTPServer.listen(PORT, () => {
+        console.log(`🚀 Servidor escuchando en el puerto ${PORT}`);
     });
     // En caso de error, lo muestro a través del método 'on' sobre la salida de 'listen'
     server_1.myHTTPServer.on('error', (error) => console.log(`Error en servidor ${error}`));

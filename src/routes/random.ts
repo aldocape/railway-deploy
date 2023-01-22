@@ -1,5 +1,4 @@
 import { Router, Request, Response } from 'express';
-import { PORT } from '../services/server';
 
 const router = Router();
 
@@ -26,7 +25,6 @@ router.get('/', async (req: Request, res: Response) => {
 
     computo.on('message', (result) => {
       res.json({
-        msg: `Hola desde el puerto ${PORT}`,
         resultado: result,
       });
     });

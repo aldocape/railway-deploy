@@ -13,7 +13,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const server_1 = require("../services/server");
 const router = (0, express_1.Router)();
 const child_process_1 = require("child_process");
 const path_1 = __importDefault(require("path"));
@@ -31,7 +30,6 @@ router.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         computo.send(canti);
         computo.on('message', (result) => {
             res.json({
-                msg: `Hola desde el puerto ${server_1.PORT}`,
                 resultado: result,
             });
         });

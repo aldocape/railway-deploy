@@ -34,7 +34,6 @@ app.set('view engine', 'ejs');
 app.use(loginRouter);
 app.use('/api', mainRouter);
 
-export const PORT = process.env.PORT || 8080;
 export const MODE = args.mode; // default: 'fork'
 
 //Obtengo el numero de núcleos disponibles en mi PC

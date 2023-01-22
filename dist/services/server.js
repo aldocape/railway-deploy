@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.myHTTPServer = exports.numCPUs = exports.MODE = exports.PORT = void 0;
+exports.myHTTPServer = exports.numCPUs = exports.MODE = void 0;
 const express_1 = __importDefault(require("express"));
 const tools_1 = require("../utils/tools");
 const http = require('http');
@@ -28,7 +28,6 @@ app.use(express_1.default.urlencoded({ extended: true })); //permite form data
 app.set('view engine', 'ejs');
 app.use(login_1.default);
 app.use('/api', index_1.default);
-exports.PORT = process.env.PORT || 8080;
 exports.MODE = args.mode; // default: 'fork'
 //Obtengo el numero de núcleos disponibles en mi PC
 exports.numCPUs = os_1.default.cpus().length;
